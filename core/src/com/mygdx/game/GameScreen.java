@@ -53,37 +53,37 @@ public class GameScreen implements Screen {
 		this.game = game;
 		this.NumberOfDisks=NumberOfDisks;
 		batch = new SpriteBatch();
-		pillar1 = new Texture("pillar.png");
-		buttonMenu = new Texture("buttonMenu.png");
+		pillar1 = new Texture(Gdx.files.internal("assets/pillar.png"));
+		buttonMenu = new Texture(Gdx.files.internal("assets/buttonMenu.png"));
 
 		font = new BitmapFont();
 		font.setColor(1f, 0f, 0f, 1f);
 
-		BackMusic = Gdx.audio.newMusic(Gdx.files.internal("BackSound.mp3"));
+		BackMusic = Gdx.audio.newMusic(Gdx.files.internal("assets/BackSound.mp3"));
 		BackMusic.setLooping(true);
 		BackMusic.setVolume(0.3f);
 		BackMusic.play(); // ВКЛЮЧИ МУЗЫКУ!!!!
 
-		Success1 = Gdx.audio.newSound(Gdx.files.internal("Good1.mp3"));
-        Success2 = Gdx.audio.newSound(Gdx.files.internal("Good2.mp3"));
-        Success3 = Gdx.audio.newMusic(Gdx.files.internal("Good3.mp3"));
-		Success4 = Gdx.audio.newSound(Gdx.files.internal("Good4.mp3"));
-		Success5 = Gdx.audio.newSound(Gdx.files.internal("Good5.mp3"));
-		UpAndDown = Gdx.audio.newSound(Gdx.files.internal("UpAndDown.mp3"));
+		Success1 = Gdx.audio.newSound(Gdx.files.internal("assets/Good1.mp3"));
+        Success2 = Gdx.audio.newSound(Gdx.files.internal("assets/Good2.mp3"));
+        Success3 = Gdx.audio.newMusic(Gdx.files.internal("assets/Good3.mp3"));
+		Success4 = Gdx.audio.newSound(Gdx.files.internal("assets/Good4.mp3"));
+		Success5 = Gdx.audio.newSound(Gdx.files.internal("assets/Good5.mp3"));
+		UpAndDown = Gdx.audio.newSound(Gdx.files.internal("assets/UpAndDown.mp3"));
 
-		Ow1 = Gdx.audio.newSound(Gdx.files.internal("Ow1.mp3"));
-		Ow2 = Gdx.audio.newSound(Gdx.files.internal("Ow2.mp3"));
-		Ow3 = Gdx.audio.newSound(Gdx.files.internal("Ow3.mp3"));
-		Ow4 = Gdx.audio.newSound(Gdx.files.internal("Ow4.mp3"));
-		Ow5 = Gdx.audio.newSound(Gdx.files.internal("Ow5.mp3"));
-		SoundButton = Gdx.audio.newSound(Gdx.files.internal("SoundButton.mp3"));
+		Ow1 = Gdx.audio.newSound(Gdx.files.internal("assets/Ow1.mp3"));
+		Ow2 = Gdx.audio.newSound(Gdx.files.internal("assets/Ow2.mp3"));
+		Ow3 = Gdx.audio.newSound(Gdx.files.internal("assets/Ow3.mp3"));
+		Ow4 = Gdx.audio.newSound(Gdx.files.internal("assets/Ow4.mp3"));
+		Ow5 = Gdx.audio.newSound(Gdx.files.internal("assets/Ow5.mp3"));
+		SoundButton = Gdx.audio.newSound(Gdx.files.internal("assets/SoundButton.mp3"));
 		camera = new OrthographicCamera();
 		camera.setToOrtho(true, 800, 480);
 
 		light.perimetr = new Rectangle();                    //инициализирую прямоугольник
 		light.perimetr.setLocation(100+72/2-15/2,85);   // устанавливаю положение прямоугольника
 		light.perimetr.setSize(15,10);            //устанавливаю размеры
-		light.picture = new Texture("x0.png");      //задаю текстуру
+		light.picture = new Texture(Gdx.files.internal("assets/x0.png"));      //задаю текстуру
 
 		active = new Box();
 		active.perimetr = new Rectangle();
@@ -92,7 +92,7 @@ public class GameScreen implements Screen {
         for(int i = 0; i<NumberOfDisks;i++) {//инициализимрую элементы массива классов всех дисков
 			array[i] = new Box();
 			array[i].perimetr = new Rectangle();
-			String temp ="x"+(i+1)+".png"; //x1.png
+			String temp ="assets/x"+(i+1)+".png"; //x1.png
 			array[i].picture = new Texture(temp);
 		    array[i].perimetr.setLocation(100+ 72/2 -85/2 + i*5,100 + 15 +i*15);
 			array[i].perimetr.setSize(85-i*10,10);

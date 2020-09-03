@@ -45,21 +45,20 @@ public class MainMenuScreen implements Screen {
         camera = new OrthographicCamera();
         camera.setToOrtho(false,800,600);
 
+        textureButtonExit = new Texture(Gdx.files.internal("assets/buttonExit.png"));
+        textureButtonInfo = new Texture(Gdx.files.internal("assets/buttonInfo.png"));
+        textureButtonStart = new Texture(Gdx.files.internal("assets/buttonStart.png"));
+        Alex = new Texture(Gdx.files.internal("assets/Alex.jpg"));
+        ChooseFive = new Texture(Gdx.files.internal("assets/Choosefive.png"));
+        ChooseSix = new Texture(Gdx.files.internal("assets/ChooseSix.png"));
+        ChooseSeven = new Texture(Gdx.files.internal("assets/ChooseSeven.png"));
+        ChooseEight = new Texture(Gdx.files.internal("assets/ChooseEight.png"));
 
-        textureButtonExit = new Texture("buttonExit.png");
-        textureButtonInfo = new Texture("buttonInfo.png");
-        textureButtonStart = new Texture("buttonStart.png");
-        Alex = new Texture("Alex.jpg");
-        ChooseFive = new Texture("Choosefive.png");
-        ChooseSix = new Texture("ChooseSix.png");
-        ChooseSeven = new Texture("ChooseSeven.png");
-        ChooseEight = new Texture("ChooseEight.png");
+        ChooseNumberDisk = new Texture(Gdx.files.internal("assets/ChooseNumberDisk.png"));
 
-        ChooseNumberDisk = new Texture("ChooseNumberDisk.png");
-
-        hello = Gdx.audio.newMusic(Gdx.files.internal("IamAlex.mp3"));
-        EditPiaf = Gdx.audio.newMusic(Gdx.files.internal("EditPiaf.mp3"));
-        SoundButton = Gdx.audio.newSound(Gdx.files.internal("SoundButton.mp3"));
+        hello = Gdx.audio.newMusic(Gdx.files.internal("assets/IamAlex.mp3"));
+        EditPiaf = Gdx.audio.newMusic(Gdx.files.internal("assets/EditPiaf.mp3"));
+        SoundButton = Gdx.audio.newSound(Gdx.files.internal("assets/SoundButton.mp3"));
         hello.play();
 
         EditPiaf.setLooping(true);

@@ -19,10 +19,10 @@ public class InfoScreen implements Screen {
     public InfoScreen(MyGdxGame game)
     {
         this.game = game;
-        textureFon = new Texture("Fon.png");
+        textureFon = new Texture(Gdx.files.internal("assets/Fon.png"));
         batch = new SpriteBatch();
         font = new BitmapFont();
-        SoundButton = Gdx.audio.newSound(Gdx.files.internal("SoundButton.mp3"));
+        SoundButton = Gdx.audio.newSound(Gdx.files.internal("assets/SoundButton.mp3"));
     }
 
     @Override
